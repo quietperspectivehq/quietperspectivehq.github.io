@@ -12,7 +12,6 @@
   <link rel="canonical" href="https://quietperspectivehq.github.io/">
   <link rel="preload" as="image" href="images/brand-mark.webp" fetchpriority="high">
 
-  <meta property="og:locale" content="en_US">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Quiet Perspective">
   <meta property="og:title" content="Quiet Perspective — Thoughtful words for everyday life">
@@ -33,18 +32,31 @@
 
   <title>Quiet Perspective — Thoughtful words for everyday life</title>
 
-  <!-- Browser, pinned-tab and home-screen icons. Keep assets in images/favicon/. -->
+  <!-- Browser and home-screen icons. All paths are relative to the site root. -->
+  <link rel="icon" href="images/favicon/favicon.ico" sizes="any">
   <link rel="icon" type="image/svg+xml" href="images/favicon/favicon.svg">
-  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="48x48" href="images/favicon/favicon-48x48.png">
-  <link rel="shortcut icon" type="image/x-icon" href="images/favicon/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
-  <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#0a383d">
   <link rel="manifest" href="site.webmanifest">
 
-  <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
+  <!-- Start fresh visits and reloads at the top; clear the obsolete links fragment. -->
+  <script>
+    (() => {
+      const navigation = performance.getEntriesByType("navigation")[0];
+      if ("scrollRestoration" in window.history && navigation?.type !== "back_forward") {
+        window.history.scrollRestoration = "manual";
+      }
+
+      if (window.location.hash === "#social-links") {
+        window.history.replaceState(null, "", window.location.pathname + window.location.search);
+        window.scrollTo(0, 0);
+      }
+    })();
+  </script>
+
+  <link rel="stylesheet" href="styles.css?v=20261122-2">
+  <script src="script.js?v=20261122-2" defer></script>
 
   <script type="application/ld+json">
   {
@@ -68,8 +80,6 @@
   </script>
 </head>
 <body>
-  <a class="skip-link" href="#social-links">Skip to social links</a>
-
   <div class="ambient ambient--one" aria-hidden="true"></div>
   <div class="ambient ambient--two" aria-hidden="true"></div>
   <div class="ambient ambient--three" aria-hidden="true"></div>
@@ -106,7 +116,7 @@
           <p>Choose the platform that feels right for you.</p>
         </div>
 
-        <nav class="social-grid" id="social-links" aria-label="Quiet Perspective social media and community links">
+        <nav class="social-grid" aria-label="Quiet Perspective social media and community links">
           <a class="social-card" href="https://discord.gg/sKGpeuPsy3" target="_blank" rel="noopener noreferrer" aria-label="Discord Server — opens in a new tab">
             <span class="social-icon"><img src="images/social/discord.webp" alt="" width="48" height="48" loading="lazy" decoding="async"></span>
             <span class="social-copy"><span class="social-name">Discord Server</span><span class="social-detail">Join the community</span></span>

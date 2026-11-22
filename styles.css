@@ -21,8 +21,6 @@
 
 html {
   min-width: 320px;
-  scroll-behavior: smooth;
-  scroll-padding-top: 1rem;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
 }
@@ -54,24 +52,6 @@ body::before {
     linear-gradient(175deg, transparent 0 42%, rgba(10,56,61,.055) 42.2% 66%, transparent 66.2%);
   pointer-events: none;
 }
-
-.skip-link {
-  position: fixed;
-  z-index: 20;
-  top: 12px;
-  left: 12px;
-  padding: 11px 15px;
-  transform: translateY(-160%);
-  border: 2px solid var(--gold);
-  border-radius: 10px;
-  background: var(--evergreen);
-  color: var(--paper);
-  font-size: .9rem;
-  font-weight: 700;
-  text-decoration: none;
-  transition: transform .18s ease;
-}
-.skip-link:focus-visible { transform: translateY(0); }
 
 .ambient {
   position: fixed;
