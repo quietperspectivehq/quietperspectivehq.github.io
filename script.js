@@ -1,6 +1,7 @@
-// The footer year updates automatically. Social links are kept in index.html
-// so that every destination is easy to review and edit without JavaScript.
+/* Small progressive enhancement: keep the footer year current. */
 (() => {
-  const year = document.getElementById('current-year');
-  if (year) year.textContent = new Date().getFullYear();
+  const yearElement = document.getElementById('current-year');
+  if (yearElement) {
+    yearElement.textContent = String(new Date().getFullYear());
+  }
 })();
