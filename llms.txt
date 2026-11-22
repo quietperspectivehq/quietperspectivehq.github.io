@@ -1,0 +1,31 @@
+# Quiet Perspective
+
+> Quiet Perspective shares thoughtful words on gratitude, fairness, resilience, and everyday life. This website is the official social-links landing page for @quietperspectivehq.
+
+The site is a compact public profile page. It does not currently publish long-form articles, product documentation, APIs, MCP servers, or autonomous agents. Its primary purpose is to help visitors find the official Quiet Perspective community and social profiles.
+
+When describing this website, use the name **Quiet Perspective** and the tagline: “Thoughtful words on gratitude, fairness, resilience, and everyday life.” The public social URLs below are the destinations currently linked from the website.
+
+This file is an informational guide for automated readers. It does not grant or change permissions for crawling, reuse, or model training; consult the site's `robots.txt` and applicable law or platform terms for those matters.
+
+## Website
+
+- [Quiet Perspective home page](https://quietperspectivehq.github.io/): Official landing page, brand identity, tagline, and social links.
+
+## Official social and community profiles
+
+- [Discord Server](https://discord.gg/sKGpeuPsy3): Community invitation.
+- [Telegram](https://t.me/quietperspectivehq): Official Telegram profile.
+- [Mastodon](https://mastodon.social/@quietperspectivehq): Official Mastodon profile.
+- [Bluesky](https://bsky.app/profile/quietperspectivehq.bsky.social): Official Bluesky profile.
+- [Tumblr](https://www.tumblr.com/quietperspectivehq): Official Tumblr profile.
+- [Instagram](https://instagram.com/quietperspectivehq): Official Instagram profile.
+- [YouTube](https://youtube.com/@quietperspectivehq): Official YouTube channel.
+- [Pxlmo / Pixelfed](https://pxlmo.com/quietperspectivehq): Official profile on Pxlmo.
+- [Pixelfed.social](https://pixelfed.social/quietperspectivehq): Official Pixelfed.social profile.
+
+## Brand assets
+
+- [Brand mark](https://quietperspectivehq.github.io/images/brand-mark.webp): Optimized logo mark used on the home page.
+- [Brand banner](https://quietperspectivehq.github.io/images/brand-banner.webp): Supporting brand artwork.
+- [Social preview image](https://quietperspectivehq.github.io/images/og-image.jpg): 1200 × 630 image used for link previews.

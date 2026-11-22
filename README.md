@@ -1,60 +1,55 @@
 # Quiet Perspective — GitHub Pages
 
-A responsive, single-page social profile for Quiet Perspective. Built with plain HTML, CSS and a tiny JavaScript enhancement; no build step or external UI framework is required.
+Complete static website package for https://quietperspectivehq.github.io/.
 
-## Publish
+## Deploy / replace the current repository
 
-1. Download and extract this project.
-2. Upload **the contents of this folder** to the root of `quietperspectivehq.github.io` (do not upload an extra enclosing folder).
-3. Commit to the `main` branch.
-4. In GitHub, open **Settings → Pages** and confirm the site is deployed from `main` / `/(root)`.
-5. Open `https://quietperspectivehq.github.io/` after GitHub Pages finishes deploying.
+1. Extract this ZIP file.
+2. Upload **all files and folders inside the extracted package** to the root of `quietperspectivehq/quietperspectivehq.github.io`.
+3. Replace files when GitHub asks, and commit the changes to `main`.
+4. Keep the `.nojekyll` file and the `.well-known/` directory. They are required for the hidden ARD manifest directory to be published by GitHub Pages.
+5. Wait for GitHub Pages deployment, then test the URLs listed below.
 
-## Files
+The archive places `index.html` directly at its root (there is no enclosing project directory).
 
-```text
-.
-├── index.html
-├── styles.css
-├── script.js
-├── site.webmanifest
-├── favicon.ico                 # Root fallback for browsers that request it directly
-└── images/
-    ├── brand-mark.webp         # Optimized header logo
-    ├── brand-logo-full.webp    # Optional full logo asset
-    ├── brand-banner.webp       # Original brand banner
-    ├── og-image.jpg            # 1200 × 630 social preview image
-    ├── favicon/
-    │   ├── favicon.ico
-    │   ├── favicon.svg
-    │   ├── favicon-16x16.png
-    │   ├── favicon-32x32.png
-    │   ├── favicon-48x48.png
-    │   ├── favicon-192x192.png
-    │   ├── favicon-512x512.png
-    │   └── apple-touch-icon.png
-    └── social/                 # Optimized WebP platform icons
-```
+## Project files
 
-## Responsive behaviour
+- `index.html`, `styles.css`, `script.js`: responsive landing page.
+- `images/brand-mark.webp`, `images/brand-logo-full.webp`, `images/brand-banner.webp`: optimized brand artwork.
+- `images/social/*.webp`: optimized local platform icons.
+- `images/favicon/*`: circular favicon set, retaining the requested directory structure.
+- `images/og-image.jpg`: 1200 × 630 social-sharing preview.
+- `robots.txt`: allows public crawling and points to the XML sitemap.
+- `sitemap.xml`: one-page sitemap for the canonical homepage.
+- `llms.txt`: concise Markdown overview and verified profile links for automated readers.
+- `.well-known/ard.json`: structurally valid empty ARD manifest. The website does not currently publish MCP servers, A2A agents, or other callable agentic resources, so no fake entries are advertised.
+- `.nojekyll`: tells GitHub Pages to publish static dot-directories, including `.well-known/`.
 
-- Wide desktop: three social-link columns.
-- Tablets and medium screens: two columns through 1000px.
-- Phones: one column at 620px and below.
-- Narrow 320–360px screens receive tighter spacing and type adjustments.
+## After deployment, verify these URLs
+
+- https://quietperspectivehq.github.io/robots.txt
+- https://quietperspectivehq.github.io/sitemap.xml
+- https://quietperspectivehq.github.io/llms.txt
+- https://quietperspectivehq.github.io/.well-known/ard.json
+- https://quietperspectivehq.github.io/images/favicon/favicon.svg
+
+Each should return HTTP 200. The ARD manifest should contain an `entries` array (currently empty by design).
+
+## Performance changes
+
+- The main brand mark is resized to 288 × 288 WebP, appropriate for its 132 CSS-pixel display area and high-density screens.
+- The first Discord icon is eager-loaded and high priority because Lighthouse identified it as an LCP candidate; subsequent social icons remain lazy-loaded.
+- The profile-card entrance animation uses transform only. It no longer sets the whole card's opacity to zero, so the heading remains visible to audits and assistive technology immediately.
+- Cache-busting query strings are added to the CSS and JavaScript references.
+
+## Responsive layout
+
+- Wide desktop: three columns.
+- Tablet and medium screens: two columns.
+- Mobile: one column, with tighter spacing below 360px.
+- Keyboard focus remains visible on social links. No visible skip-to-links banner is included.
 - Reduced-motion preferences are respected.
-- The page opens at the top; it has no visible skip-to-links banner or automatic jump to the social section. Legacy `#social-links` URLs are cleaned up on load.
 
-## Branding and metadata
+## Social destinations
 
-The page keeps the Quiet Perspective evergreen, ivory, sage and gold palette. Open Graph and X/Twitter metadata use `images/og-image.jpg`, a 1200 × 630 image derived from the supplied brand banner. Favicon links correctly point to `images/favicon/`; the web app manifest remains in the site root and points to the icons in that folder.
-
-## Updating links
-
-Edit the nine `href` values in the social navigation `<nav>` section of `index.html`. The visible names and details are in the same anchor elements.
-
-## After deployment
-
-- Test at 320, 375, 430, 768, 1024 and 1440px widths.
-- Check favicon after a hard refresh or in a private/incognito window; browsers can cache favicons independently of the page.
-- Social-preview bots can cache old metadata. Re-scrape the URL in the relevant platform's sharing debugger if an old image remains visible.
+The nine destinations currently included are Discord, Telegram, Mastodon, Bluesky, Tumblr, Instagram, YouTube, Pxlmo and Pixelfed.social. Edit their `href` attributes in the `<nav>` block of `index.html` to change destinations.

@@ -384,8 +384,8 @@ h2 {
   to { transform: translate3d(12px, 18px, 0) scale(1.06); }
 }
 @keyframes card-arrive {
-  from { opacity: 0; transform: translateY(22px) scale(.99); }
-  to { opacity: 1; transform: translateY(0) scale(1); }
+  from { transform: translateY(14px) scale(.995); }
+  to { transform: translateY(0) scale(1); }
 }
 @keyframes card-float {
   0%, 100% { translate: 0 0; }
