@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Quiet Perspective sunrise landscape">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#fffdf5"/><stop offset="1" stop-color="#fefaeb"/></linearGradient>
+    <linearGradient id="sun" x1="0" y1="0" x2="0.8" y2="1"><stop stop-color="#f8e6b8"/><stop offset="1" stop-color="#dfb96f"/></linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="104" fill="url(#sky)"/>
+  <path d="M58 278 A198 160 0 0 1 454 278" fill="none" stroke="#0a383d" stroke-width="16" stroke-linecap="round"/>
+  <g stroke="#efdbad" stroke-width="10" stroke-linecap="round" opacity=".9">
+    <path d="M256 82v92"/><path d="M172 106l35 77"/><path d="M340 106l-35 77"/>
+    <path d="M112 160l67 58"/><path d="M400 160l-67 58"/>
+    <path d="M78 226l79 26"/><path d="M434 226l-79 26"/>
+  </g>
+  <circle cx="256" cy="270" r="76" fill="url(#sun)"/>
+  <path d="M58 278c54-18 112-17 164 7 24 11 45 25 66 39-89 3-166 29-218 72-16-35-16-81-12-118Z" fill="#285d5d"/>
+  <path d="M58 278c63-8 122 3 170 30 22 12 43 25 60 38-75-7-153 22-218 58-17-36-17-86-12-126Z" fill="#0a383d"/>
+  <path d="M256 346c59-45 126-74 198-68 6 43 0 88-16 122l-182-54Z" fill="#285d5d"/>
+  <path d="M256 346c73-39 138-64 198-68 7 42 2 91-16 122-61-7-121-20-182-54Z" fill="#0a383d"/>
+  <path d="M256 341c48 4 92 12 111 27 10 8 7 17-12 28-28 16-65 29-83 44-10 8-7 18 8 26 24 12 58 17 91 21H245c-25-14-31-31-19-48 17-24 70-39 100-54 15-8 15-13 2-20-18-10-44-17-72-24Z" fill="#fefaeb"/>
+  <path d="M256 341c48 4 92 12 111 27 10 8 7 17-12 28-28 16-65 29-83 44-10 8-7 18 8 26" fill="none" stroke="#f3e1b9" stroke-width="2"/>
+</svg>
