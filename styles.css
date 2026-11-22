@@ -71,7 +71,7 @@ body::before {
   text-decoration: none;
   transition: transform .18s ease;
 }
-.skip-link:focus { transform: translateY(0); }
+.skip-link:focus-visible { transform: translateY(0); }
 
 .ambient {
   position: fixed;
