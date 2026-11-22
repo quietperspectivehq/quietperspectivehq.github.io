@@ -161,7 +161,6 @@ body::before {
   border-radius: 50%;
   background: linear-gradient(145deg, #fffef8, #f4ebd1);
   box-shadow: 0 8px 24px rgba(10,56,61,.09), inset 0 0 0 7px rgba(255,255,255,.6);
-  animation: halo-breathe 6s ease-in-out infinite;
 }
 .logo-halo::before,
 .logo-halo::after {
@@ -391,11 +390,6 @@ h2 {
   0%, 100% { translate: 0 0; }
   50% { translate: 0 -4px; }
 }
-@keyframes halo-breathe {
-  0%, 100% { box-shadow: 0 8px 24px rgba(10,56,61,.09), inset 0 0 0 7px rgba(255,255,255,.6); }
-  50% { box-shadow: 0 10px 29px rgba(10,56,61,.13), 0 0 0 7px rgba(217,182,109,.055), inset 0 0 0 7px rgba(255,255,255,.6); }
-}
-
 /* Give medium-width tablets more room for platform names: two columns until 620px. */
 @media (max-width: 1000px) {
   .profile-card { width: min(100%, 760px); }
