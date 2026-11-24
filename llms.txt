@@ -23,6 +23,8 @@ This file is an informational guide for automated readers. It does not grant or 
 - [YouTube](https://youtube.com/@quietperspectivehq): Official YouTube channel.
 - [Pxlmo / Pixelfed](https://pxlmo.com/quietperspectivehq): Official profile on Pxlmo.
 - [Pixelfed.social](https://pixelfed.social/quietperspectivehq): Official Pixelfed.social profile.
+- [Gram.social](https://gram.social/quietperspectivehq): Official Gram.social profile.
+
 
 ## Brand assets
 
